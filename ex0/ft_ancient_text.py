@@ -5,8 +5,10 @@ if __name__ == "__main__":
 
     try:
         print(f"Accessing Storage Vault: {file_name}")
-        test = open(file_name, "r")
-        test.close()
+        fi = open(file_name, "r")
+        print("Connection established...\n")
+        print(fi.read())
+        print("\nData recovery complete. Storage unit disconnected.")
 
     except FileNotFoundError:
         print("The file was not found.")
@@ -16,9 +18,3 @@ if __name__ == "__main__":
 
     except OSError as e:
         print(f"An OS error occurred: {e}")
-
-    else:
-        print("Connection established...\n")
-        fi = open(file_name, "r")
-        print(fi.read())
-        print("\nData recovery complete. Storage unit disconnected.")
