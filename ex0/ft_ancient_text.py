@@ -1,18 +1,3 @@
-def data_reading(file_name: str) -> None:
-    print("\nRECOVERED DATA:")
-
-    f = open(file_name, "r")
-    try:
-        i = 1
-        for line in f:
-            print(line, end="")
-            i += 1
-    finally:
-        f.close()
-
-    print("\n\nData recovery complete. Storage unit disconnected.")
-
-
 if __name__ == "__main__":
     print("=== CYBER ARCHIVES - DATA RECOVERY SYSTEM ===\n")
 
@@ -33,5 +18,7 @@ if __name__ == "__main__":
         print(f"An OS error occurred: {e}")
 
     else:
-        print("Connection established...")
-        data_reading(file_name)
+        print("Connection established...\n")
+        fi = open(file_name, "r")
+        print(fi.read())
+        print("\nData recovery complete. Storage unit disconnected.")
