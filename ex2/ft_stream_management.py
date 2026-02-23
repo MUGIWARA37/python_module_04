@@ -16,5 +16,5 @@ if __name__ == "__main__":
 
         print("Three-channel communication test successful.")
 
-    except Exception as e:
+    except (Exception, KeyboardInterrupt) as e:
         print(e)
