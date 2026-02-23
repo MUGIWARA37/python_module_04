@@ -8,6 +8,7 @@ if __name__ == "__main__":
         fi = open(file_name, "r")
         print("Connection established...\n")
         print(fi.read())
+        fi.close()
         print("\nData recovery complete. Storage unit disconnected.")
 
     except FileNotFoundError:
