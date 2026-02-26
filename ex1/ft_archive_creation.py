@@ -4,10 +4,11 @@ def data_writing(file_name: str) -> None:
         "[ENTRY 002] Efficiency increased by 347%",
         "[ENTRY 003] Archived by Data Archivist trainee"
     ]
-    print("\nInscribing preservation data...")
+
     f = open(file_name, 'w')
 
-    print("Connection established...")
+    print("Storage unit created successfully...")
+    print("\nInscribing preservation data...")
 
     for line in data_list:
         f.write(line)

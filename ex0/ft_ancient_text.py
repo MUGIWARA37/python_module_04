@@ -7,15 +7,16 @@ if __name__ == "__main__":
         print(f"Accessing Storage Vault: {file_name}")
         fi = open(file_name, "r")
         print("Connection established...\n")
+        print("RECOVERED DATA:")
         print(fi.read())
         fi.close()
         print("\nData recovery complete. Storage unit disconnected.")
 
     except FileNotFoundError:
-        print("The file was not found.")
+        print("Error: Storage vault not found.")
 
     except PermissionError:
-        print("You don't have permission to read this file.")
+        print("Error: You don't have permission to read this file.")
 
     except OSError as e:
-        print(f"An OS error occurred: {e}")
+        print(f"Error an OS error occurred: {e}")
